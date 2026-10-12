@@ -2,7 +2,6 @@
 with TRIPS as (
 select 
 ride_id,
---rideable_type,
 DATE(to_timestamp(started_at)) as trip_date,
 start_statio_id as start_station_id,
 end_station_id,
