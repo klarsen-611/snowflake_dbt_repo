@@ -8,9 +8,8 @@ dayname(to_timestamp(started_at)),
 {{day_type('started_at')}} as day_type,
 {{get_season('started_at')}} as station_of_year
 FROM
-{{ source('demo', 'BIKE') }}
+{{ ref('stg_bike') }}
 where started_at <> 'started_at'
-
 )
 select *
 from cte;
